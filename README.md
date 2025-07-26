@@ -6,7 +6,7 @@
 # LLM prompt
 * [Analyzing DeepSeek’s System Prompt: Jailbreaking Generative AI](https://lab.wallarm.com/jailbreaking-generative-ai/)
 
-# 2025-07-26
+# 2025-07-05, 2025-07-26
 * windows에 vscode와 wsl, claude 설치
 * quick_example: train image 9장, test image 3장, host,wm을 64x64로 줄여서 embedding하도록 만든 간단한 프로그램
 * BER, PSNR 계산과정 추가
