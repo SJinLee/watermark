@@ -9,7 +9,7 @@
 # 2025-07-05, 2025-07-26
 * windows에 vscode와 wsl, claude 설치
 * quick_example: train image 9장, test image 3장, host,wm을 64x64로 줄여서 embedding하도록 만든 간단한 프로그램
-* BER, PSNR 계산과정 추가
-* attack을 적용했을 때 결과 보기
-* attack을 학습과정에 넣기
-* 8x8로 preprocessing하기
+* BER, PSNR을 계산하는 과정을 추가해줘
+* gaussian-filter attack을 적용하는 과정을 추가해줘
+* gaussian-filter attack을 50%, no attack을 50%로 하여 학습하도록 수정해줘
+* host image의 preprocessing과 watermark processing의 output이 8x8이 되도록 수정해줘
