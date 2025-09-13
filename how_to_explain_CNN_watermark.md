@@ -165,6 +165,7 @@ ConvBlock(128, 1, kernel_size=3, stride=2, padding=1, activation=False) # 16->8
    - [https://dde.binghamton.edu/download/ImageDB/BOSSbase_1.01.zip](https://dde.binghamton.edu/download/ImageDB/BOSSbase_1.01.zip)
 - 평가(test) 데이터로그레이(gray) 스케일 영상이 49장으로 구성된 표준 시험데이터셋을 128×128 해상도로 스케일링하여 사용
    - [http://decsai.ugr.es/cvg/CG/base.htm](http://decsai.ugr.es/cvg/CG/base.htm)
+- 워터마크 데이터는 무작위로 8x8의 bit pattern을 만들어 사용
 - 빠른 학습을 위해 학습데이터 중에서 ９개、 평가 데이터 중 ３개의 이미지를 사용함
   - 학습데이터가 적어도 학습이 되는 이유는 CNN의 특성이 kernel 크기의 이미지 patch에 대하여 학습을 하는 모델이라고 볼 수 있기 때문
   - 학습 이미지는 9개뿐이지만 128x128크기의 이미지를 3x3 patch로 중첩될 수 있도록 나누면 약 14,000개의 patch가 생기므로 9개의 image를 학습하는 것은 약126,000개의 patch를 학습하는 것과 같다고 볼 수 있음
