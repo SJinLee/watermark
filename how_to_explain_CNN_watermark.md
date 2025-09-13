@@ -1,5 +1,5 @@
 # 1. Introduction
-＃＃ １。１ 인공신경망의구조
+## 1.1 인공신경망의구조
 - [워터마크 및 해상도 적응적인 영상 워터마킹을 위한 딥 러닝 프레임워크](https://scienceon.kisti.re.kr/commons/util/originalView.do?cn=JAKO202011263332864&dbt=JAKO&koi=KISTI1.1003%2FJNL.JAKO202011263332864)
    의 워터마크 인공신경망을 수정하여 사용하였음
 - Host이미지 전처리 네트워크, 워터마크 전처리 네트워크, 워터마크 삽입네트워크, 공격 시뮬레이션, WM 추출 네트워크로 인공신경망은 구성되었고 CNN만으로 이루어졌음
@@ -71,6 +71,15 @@ ConvBlock(128, 1, kernel_size=3, stride=2, padding=1, activation=False) # 16->8
 
 - 최적화 방법
    - Adam을 사용함
+
+ ## 1.2 질문
+ - 학습데이터가 작아도 되는 이유
+ - watermark delta의 모양
+    -  주기적인가?
+    -  워터마크의 값이 0일때와 1일 때의 차이가 있는가?
+    -  host image의 밝기에 따라 다른가?
+    -  어떤 가중치가 중요한가? 가중치를 바꾸면 extraction이 잘 안되는 경우가 있는가?
+    -  어떤 가중치를 바꿀때 embedding 결과가 크게 달라지는가?
 
 - 학습데이터
    - 호스트 영상의 학습 데이터로 그레이(gray) 스케일 영상이10,000장으로 구성된 BOSS 데이터 셋을 128×128 해상도로 스케일링(scaling)하여 사용
