@@ -61,3 +61,19 @@ ConvBlock(32, 64, kernel_size=3, stride=2, padding=1, activation=True)  # 64->32
 ConvBlock(64, 128, kernel_size=3, stride=2, padding=1, activation=True) # 32->16
 ConvBlock(128, 1, kernel_size=3, stride=2, padding=1, activation=False) # 16->8
 ```
+
+- Loss 함수
+   - 삽입 네트워크의 출력과 host 이미지 사이의 loss는 MSE(Mean Squared Error)를 사용하였고 이것을 비가시성 에러라고 함
+   - 추출 네트워크의 출력과 워터마크 사이의 loss는 MSE(Mean Squared Error)를 사용하였고 이것을 강인성 에러라고 함
+   - 전체 loss는 두 에러의 가중합을 사용함
+      - [전체 loss]  = 1.0 * [비가시성 에러] + 0.5 * [강인성 에러]
+
+- 최적화 방법
+   - Adam을 사용함
+
+- 학습데이터
+   - 호스트 영상의 학습 데이터로 그레이(gray) 스케일 영상이10,000장으로 구성된 BOSS 데이터 셋을 128×128 해상도로 스케일링(scaling)하여 사용
+      - [https://dde.binghamton.edu/download/ImageDB/BOSSbase_1.01.zip](https://dde.binghamton.edu/download/ImageDB/BOSSbase_1.01.zip)
+   - 평가(test) 데이터로그레이(gray) 스케일 영상이 49장으로 구성된 표준 시험데이터셋을 128×128 해상도로 스케일링하여 사용
+      - [http://decsai.ugr.es/cvg/CG/base.htm](http://decsai.ugr.es/cvg/CG/base.htm)
+   － 빠른 학습을 위해 학습데이터 중에서 ９개、 평가 데이터 중 ３개의 이미지를 사용함
