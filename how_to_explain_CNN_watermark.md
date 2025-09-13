@@ -72,7 +72,14 @@ ConvBlock(128, 1, kernel_size=3, stride=2, padding=1, activation=False) # 16->8
 - 최적화 방법
    - Adam을 사용함
 
- ## 1.2 질문
+## 1.2 학습데이터
+- 호스트 영상의 학습 데이터로 그레이(gray) 스케일 영상이10,000장으로 구성된 BOSS 데이터 셋을 128×128 해상도로 스케일링(scaling)하여 사용
+   - [https://dde.binghamton.edu/download/ImageDB/BOSSbase_1.01.zip](https://dde.binghamton.edu/download/ImageDB/BOSSbase_1.01.zip)
+- 평가(test) 데이터로그레이(gray) 스케일 영상이 49장으로 구성된 표준 시험데이터셋을 128×128 해상도로 스케일링하여 사용
+   - [http://decsai.ugr.es/cvg/CG/base.htm](http://decsai.ugr.es/cvg/CG/base.htm)
+- 빠른 학습을 위해 학습데이터 중에서 ９개、 평가 데이터 중 ３개의 이미지를 사용함
+- 
+## 1.3 질문
  - 학습데이터가 작아도 되는 이유
  - watermark delta의 모양
     -  주기적인가?
@@ -81,9 +88,3 @@ ConvBlock(128, 1, kernel_size=3, stride=2, padding=1, activation=False) # 16->8
     -  어떤 가중치가 중요한가? 가중치를 바꾸면 extraction이 잘 안되는 경우가 있는가?
     -  어떤 가중치를 바꿀때 embedding 결과가 크게 달라지는가?
 
-- 학습데이터
-   - 호스트 영상의 학습 데이터로 그레이(gray) 스케일 영상이10,000장으로 구성된 BOSS 데이터 셋을 128×128 해상도로 스케일링(scaling)하여 사용
-      - [https://dde.binghamton.edu/download/ImageDB/BOSSbase_1.01.zip](https://dde.binghamton.edu/download/ImageDB/BOSSbase_1.01.zip)
-   - 평가(test) 데이터로그레이(gray) 스케일 영상이 49장으로 구성된 표준 시험데이터셋을 128×128 해상도로 스케일링하여 사용
-      - [http://decsai.ugr.es/cvg/CG/base.htm](http://decsai.ugr.es/cvg/CG/base.htm)
-   － 빠른 학습을 위해 학습데이터 중에서 ９개、 평가 데이터 중 ３개의 이미지를 사용함
