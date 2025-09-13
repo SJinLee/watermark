@@ -3,7 +3,7 @@
    의 워터마크 인공신경망을 공부하면서 시작하였음
 - 2개의 전처리 네트워크, WM 삽입네트워크, 공격 시뮬레이션, WM 추출 네트워크로 인공신경망은 구성되었고 CNN만으로 이루어졌음
 
-<img width="500" src="framework.png">
+<img width="250" src="framework.png">
 
 - 
 
