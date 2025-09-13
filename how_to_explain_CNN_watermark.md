@@ -167,7 +167,7 @@ ConvBlock(128, 1, kernel_size=3, stride=2, padding=1, activation=False) # 16->8
    - [http://decsai.ugr.es/cvg/CG/base.htm](http://decsai.ugr.es/cvg/CG/base.htm)
 - 빠른 학습을 위해 학습데이터 중에서 ９개、 평가 데이터 중 ３개의 이미지를 사용함
   - 학습데이터가 적어도 학습이 되는 이유는 CNN의 특성이 kernel 크기의 이미지 patch에 대하여 학습을 하는 모델이라고 볼 수 있기 때문
-  - 학습 이미지는 9개뿐이지만 128x128크기의 이미지를 3x3 patch로 중첩될 수 있도록 나누면 약 14,000개의 patch가 생기므로 9개의 image에 대해선는 126,000개의 patch를 학습하는 것으로 볼 수 있음
+  - 학습 이미지는 9개뿐이지만 128x128크기의 이미지를 3x3 patch로 중첩될 수 있도록 나누면 약 14,000개의 patch가 생기므로 9개의 image는 126,000개의 patch를 학습하는 것으로 볼 수 있음
 
 # 3. 연구내용
 - CNN을 이용한 워터마킹의 원리에 대한 다음 질문에 대하여 연구함
